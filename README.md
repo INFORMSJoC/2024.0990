@@ -42,7 +42,23 @@ Below is the BibTex for citing this snapshot of the respoitory.
 ```
 
 
+## **Data**
 
+There are three main data sources:
+
+- countypres_2000-2020: [https://electionlab.mit.edu/data, https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FVOQCHQ) (license: https://creativecommons.org/publicdomain/zero/1.0/)
+- cc-est2022-agesex-all: https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-detail.html (license: https://www.census.gov/data/software/x13as/disclaimer.html)
+- uscities.csv: https://simplemaps.com/data/us-cities (license: https://creativecommons.org/licenses/by/4.0/)
+
+All data at the time of extraction is in this directory:
+
+- /DistributionFitting/data/
+
+## **Code**
+
+There is python code for statistical analysis and java code for optimization.  The code is separated into two different directories:
+
+- /DistributionFitting/code/distribution_fitting_simulation.py: This read
 
 ## **Test Sets**
 
