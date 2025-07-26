@@ -44,25 +44,37 @@ Below is the BibTex for citing this snapshot of the respoitory.
 
 ## **Data**
 
-There are three main data sources:
+The raw data used for model fitting and optimization are in the directory [data](data/). This includes:
 
-- countypres_2000-2020: [https://electionlab.mit.edu/data, https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FVOQCHQ) (license: https://creativecommons.org/publicdomain/zero/1.0/)
-- cc-est2022-agesex-all: https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-detail.html (license: https://www.census.gov/data/software/x13as/disclaimer.html)
-- uscities.csv: https://simplemaps.com/data/us-cities (license: https://creativecommons.org/licenses/by/4.0/)
+- [Voter Turnout](data/countypres_2000-2020.csv):
+  - Historical voter turnout by country per party
+  - [Web Link](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FVOQCHQ)
+  - [License](https://creativecommons.org/publicdomain/zero/1.0/)
 
-All data at the time of extraction is in this directory:
+- [County Population](data/cc-est2022-agesex-all.csv):
+  - County population with estimates
+  - [Web link](https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-detail.html): 
+  - [License](https://www.census.gov/data/software/x13as/disclaimer.html)
 
-- /DistributionFitting/data/
+- [US City Distances](data/uscities.csv)
+  - US city locations and populations
+  - [Web link](https://simplemaps.com/data/us-cities)
+  - [License](https://creativecommons.org/licenses/by/4.0/)
+
+
+The raw data is processed to create input into our optimization routines. The data that is used for optimization is as follows:
+
+- [County Distances](data/county_dist.csv): The weighted pairwise county distances.
+- [Input Data](data/InputData.csv): The output of the distribution fitting which is used for the optimization routines.
 
 ## **Code**
 
-There is python code for statistical analysis and java code for optimization.  The code is separated into two different directories:
+Our statistical analysis, distribution fitting and simulation was implemented in Python and our optimization modeling was implemented in Java.  
+- [Distribution Fitting](code/Distribution%20Fitting/): Contains one [Python script](code/distribution_fitting_simulation.py) which estimates voter turnout by county by party, and produces simulations of those values.
+- [Optimization Model](code/Optimization%20Model/): Contains The four java files that run the model, with 'main.java' containing the main function.
 
-- /DistributionFitting/code/distribution_fitting_simulation.py: This read
 
 ## **Test Sets**
-
-The folder `data` contains the benchmark instances used in our experiments. 
 
 
 
