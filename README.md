@@ -64,78 +64,21 @@ The raw data used for model fitting and optimization are in the directory [data]
 
 The raw data is processed to create input into our optimization routines. The data that is used for optimization is as follows:
 
-- [County Distances](data/county_dist.csv): The weighted pairwise county distances.
-- [Input Data](data/InputData.csv): The output of the distribution fitting which is used for the optimization routines.
+- **County Distances**: The weighted pairwise county distances. Note that the file would be large and so we provide a script as detailed below.
+- [Input Data](data/InputData.csv): The output of the distribution fitting which is used for the optimization routines. 
 
 ## **Code**
 
 Our statistical analysis, distribution fitting and simulation was implemented in Python and our optimization modeling was implemented in Java.  
 - [Distribution Fitting](code/Distribution%20Fitting/): Contains one [Python script](code/Distribution%20Fitting/distribution_fitting_simulation.py) which estimates voter turnout by county by party, and produces simulations of those values.
-- [Distance Calculator](code/Distance%20Calculator/): Contains one [Python script](code/Distance Calculator/county_distance_creator.py) which takes city distances and populations, and calulates center of mass and pairwise distances.
-- [Optimization Model](code/Optimization%20Model/): Contains The four java files that run the model, with 'main.java' containing the main function.
+- [Distance Calculator](code/Distance%20Calculator/): Contains one [Python script](code/Distance%20Calculator/county_distance_creator.py) which takes city distances and populations, and calulates center of mass and pairwise distances.
+- [Optimization Model](code/Optimization%20Model/): Contains four java files that run the optimization model, with 'main.java' containing the main function.
 
-
-## **Test Sets**
-
-
-
-The instructions are as follows:
-- If there’s a license associated with those instances that allows redistribution, please include the license file. 
-- If the instances come from a widely accessible instance library (such as MIPLIP), we request that you provide a script to download the files from the official site (or, at the very least, a list of the files). 
-- If you are using instances from a small library on an academic's website that has been published for public use, please include a file in the \data directory that describes where and when the instances were obtained from. 
-
-
-
-#### Historical data
-
-We trained a voter turnout simulation model that simulates the number of votes received by each candidate in each of the 3,150 counties participating in the 2024 U.S. presidential election using county-level voting returns for the last five elections (2004-2020) with data from the [MIT Election Data Science Lab](https://electionlab.mit.edu/).  
-
-
-INSTRUCTIONS:``If the instances come from a widely accessible instance library (such as MIPLIP), we request that you provide a script to download the files from the official site (or, at the very least, a list of the files).'' -> I think that's the case, so we can provide direct links to the files we are using, i.e., we don't need to download the data and add it to the repo. 
-
-
-#### Forecast data
-
-Now this may be an issue, as I don't know if there are licenses associated with these datasets. The data we used is probably not available online, so I guess we may have to add them to the repository. 
-
-
--  [Silver bulletin 2024 presidential election forecast](https://www.natesilver.net/p/nate-silver-2024-president-election-polls-model), extracted on 10/9/2024;
-- [The Hill's 2024 Election Center](https://elections2024.thehill.com/), extracted on 11/4/2024; and
--  [Race to the WH](https://www.racetothewh.com/), extracted on 11/5/2024.
-
-
-
-#### Other data
-
-I think we used other datasets and sources. 
-
-
-
-## **Running the Experiments**
-
-The scripts used in the experiments are located in the folder `scripts` and can be replicated through the steps described below.
-
-
-### Voter Turnout Simulation Model
-
-
-### Bayesian-style Update Model
-
-
-
-
-### Network Flow Model
-
-
-The source code with our network flow model is located in the folder `src`.
-
-
-### Out-of-Sample Evaluation
 
 
 ## **Results**
 
-The folder `results` contains the results of the experiments reported in the paper. Our code was implemented in Java. We ran our experiments on an Intel(R) Xeon(R) CPU E5-1650 v4 at 3.60GHz with 32GB of RAM. We used `CPLEX 20.1` with default settings to solve all the MIPs. We reproduce below the plots presented in the article. 
+The folder [results](results/) contains the results of the experiments reported in the paper. Our code was implemented in Java. We ran our experiments on an Intel(R) Xeon(R) CPU E5-1650 v4 at 3.60GHz with 32GB of RAM. We used `CPLEX 20.1` with default settings to solve all the MIPs. We reproduce below the plots presented in the article. 
 
 
 
