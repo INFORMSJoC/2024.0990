@@ -70,7 +70,8 @@ The raw data is processed to create input into our optimization routines. The da
 ## **Code**
 
 Our statistical analysis, distribution fitting and simulation was implemented in Python and our optimization modeling was implemented in Java.  
-- [Distribution Fitting](code/Distribution%20Fitting/): Contains one [Python script](code/distribution_fitting_simulation.py) which estimates voter turnout by county by party, and produces simulations of those values.
+- [Distribution Fitting](code/Distribution%20Fitting/): Contains one [Python script](code/Distribution%20Fitting/distribution_fitting_simulation.py) which estimates voter turnout by county by party, and produces simulations of those values.
+- [Distance Calculator](code/Distance%20Calculator/): Contains one [Python script](code/Distance Calculator/county_distance_creator.py) which takes city distances and populations, and calulates center of mass and pairwise distances.
 - [Optimization Model](code/Optimization%20Model/): Contains The four java files that run the model, with 'main.java' containing the main function.
 
 
